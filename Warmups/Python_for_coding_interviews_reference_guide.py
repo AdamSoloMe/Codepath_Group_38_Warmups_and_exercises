@@ -171,7 +171,7 @@ if __name__ == '__main__':
     for i in range(len(nums)):
         print(nums[i])
 
-    #method 2: without index
+    #method 2: access values without index
     for n in nums:
         print(n)
 
@@ -297,8 +297,8 @@ if __name__ == '__main__':
     myMap = {}
     myMap["alice"] = 88
     myMap["bob"] = 77
+    print(myMap.get("hello",3))
     print(myMap)
-    print(len(myMap))
 
     myMap["alice"] = 80
     print(myMap["alice"])
@@ -421,6 +421,36 @@ if __name__ == '__main__':
     nums = [1, 2]
     val = 3
     double(nums, val)
+
+    #for counting the totoal number of occurences in a hashmap
+    #either A use a Counter
+    from collections import  Counter
+
+    word = "mississippi"
+    #to use the counter initialze the iterable within the Counter parentheses
+    c=Counter(word)
+    print(c)
+
+    #since the Counter is a subclass of the bulit in Dictonary under the hood it is using this syntax
+
+    #the default way to count occurences using a hashmap
+    word = "mississippi"
+    counter=dict()
+
+    for i in word:
+        counter[i]=1+counter.get(i,0)
+        #When you call .get() this way,
+        # you get the current count of a given letter,
+        # or 0 (the default) if the letter is missing.
+        # Then you increment the count by 1 and store it under the corresponding letter in the dictionary.
+        #this can also be written as
+        #counter[i] += 1 # this is a shorthand for this counter[i]=1+counter.get(i,0)
+        #but this only works for integers
+
+    print(sorted(counter.values()))
+
+
+
 
 
 

@@ -136,6 +136,41 @@ if __name__ == '__main__':
     #link to all python list methods
     #https://docs.python.org/3/tutorial/datastructures.html
 
+    # Slicing and dicing
+    # Selecting
+    # single
+    # values
+    # from a list is just
+    # one
+    # part
+    # of
+    # the
+    # story.
+    # It's also possible to slice your list, which means selecting multiple elements from your list. Use the following syntax:
+
+    # my_list[start:end]
+
+    # The start index will be included,
+    # while the end index is not.
+    #
+    # The
+    # code
+    # sample
+    # below
+    # shows
+    # an
+    # example.A
+    # list
+    # with "b" and "c", corresponding to indexes 1 and 2, are selected from a list x:
+    #
+    # x = ["a", "b", "c", "d"]
+    # x[1:3]
+    # The
+    # elements
+    # with index 1 and 2 are included, while the element with index 3 is not.
+    #
+
+
     arr[2]=9
     print(arr)
 
@@ -378,98 +413,101 @@ if __name__ == '__main__':
     while arr:
         print(heapq.heappop(arr))
 
-
-    def myFunc(n, m):
-        return n * m
-
-
-    print(myFunc(3, 4))
-
-
-    # Nested functions have access to outer variables
-    def outer(a, b):
-        c = "c"
-
-        def inner():
-            return a + b + c
-
-        return inner()
-
-
-    print(outer("a", "b"))
-
-
-    # Can modify objects but not reassign
-    # unless using nonlocal keyword
-    def double(arr, val):
-        def helper():
-            # Modifying array works
-            for i, n in enumerate(arr):
-                arr[i] *= 2
-
-            # will only modify val in the helper scope
-            # val *= 2
-
-            # this will modify val outside helper scope
-            nonlocal val
-            val *= 2
-
-        helper()
-        print(arr, val)
-
-
-    nums = [1, 2]
-    val = 3
-    double(nums, val)
-
-    #for counting the totoal number of occurences in a hashmap
-    #either A use a Counter
-    from collections import  Counter
-
-    word = "mississippi"
-    #to use the counter initialze the iterable within the Counter parentheses
-    c=Counter(word)
-    print(c)
-
-    #since the Counter is a subclass of the bulit in Dictonary under the hood it is using this syntax
-
-    #the default way to count occurences using a hashmap
-    word = "mississippi"
-    counter=dict()
-
-    for i in word:
-        counter[i]=1+counter.get(i,0)
-        #When you call .get() this way,
-        # you get the current count of a given letter,
-        # or 0 (the default) if the letter is missing.
-        # Then you increment the count by 1 and store it under the corresponding letter in the dictionary.
-        #this can also be written as
-        #counter[i] += 1 # this is a shorthand for this counter[i]=1+counter.get(i,0)
-        #but this only works for integers
-
-    print(sorted(counter.values()))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    #
+    # def myFunc(n, m):
+    #     return n * m
+    #
+    #
+    # print(myFunc(3, 4))
+    #
+    #
+    # # Nested functions have access to outer variables
+    # def outer(a, b):
+    #     c = "c"
+    #
+    #     def inner():
+    #         return a + b + c
+    #
+    #     return inner()
+    #
+    #
+    # print(outer("a", "b"))
+    #
+    #
+    # # Can modify objects but not reassign
+    # # unless using nonlocal keyword
+    # def double(arr, val):
+    #     def helper():
+    #         # Modifying array works
+    #         for i, n in enumerate(arr):
+    #             arr[i] *= 2
+    #
+    #         # will only modify val in the helper scope
+    #         # val *= 2
+    #
+    #         # this will modify val outside helper scope
+    #         nonlocal val
+    #         val *= 2
+    #
+    #     helper()
+    #     print(arr, val)
+    #
+    #
+    # nums = [1, 2]
+    # val = 3
+    # double(nums, val)
+    #
+    # #for counting the totoal number of occurences in a hashmap
+    # #either A use a Counter
+    # from collections import  Counter
+    #
+    # word = "mississippi"
+    # #to use the counter initialze the iterable within the Counter parentheses
+    # c=Counter(word)
+    # print(c)
+    #
+    # #since the Counter is a subclass of the bulit in Dictonary under the hood it is using this syntax
+    #
+    # #the default way to count occurences using a hashmap
+    # word = "mississippi"
+    # counter=dict()
+    #
+    # for i in word:
+    #     counter[i]=1+counter.get(i,0)
+    #     #When you call .get() this way,
+    #     # you get the current count of a given letter,
+    #     # or 0 (the default) if the letter is missing.
+    #     # Then you increment the count by 1 and store it under the corresponding letter in the dictionary.
+    #     #this can also be written as
+    #     #counter[i] += 1 # this is a shorthand for this counter[i]=1+counter.get(i,0)
+    #     #but this only works for integers
+    #
+    # print(sorted(counter.values()))
+    # x=[4,11,10,2]
+    # heapq.heapify(x)
+    # print(x)
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+    #
 
 
 

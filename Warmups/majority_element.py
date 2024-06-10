@@ -7,7 +7,6 @@ if __name__ == '__main__':
     for v in c.values():
         if v>(len(nums)/2)+1:
             return v
-
     # Creating a hash table to keep track of the total value of each element in the array
     # total_elements_hashtable = {}
     #

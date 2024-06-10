@@ -36,7 +36,7 @@ class Stack:
         else:
             return None
 
-    def __str__(self):
+    def __repr__(self):
         traverse_stack=self.top
         stack_values=[]
         while traverse_stack:

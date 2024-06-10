@@ -30,7 +30,7 @@ class My_Queue:
             print(f"the node value dequeued is {removed_node.data}")
             return removed_node
 
-    def __str__(self):
+    def __repr__(self):
         traverse_list=self.head
         queue_values=[]
         while traverse_list != None:
@@ -46,4 +46,5 @@ if __name__ == '__main__':
     ll_q.enqueue(2)
     ll_q.enqueue(4)
     ll_q.enqueue(3)
+    print(ll_q)
 
